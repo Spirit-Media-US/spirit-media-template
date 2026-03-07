@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+// Example Sanity fetch — replace with real query for this site
+// import { sanityClient } from '../lib/sanity.ts';
+// const items = await sanityClient.fetch(`*[_type == "post"] | order(_createdAt desc)`);
+---
+
+<Layout title="Site Name — Tagline">
+  <main class="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+    <h1 class="text-4xl font-bold mb-4">
+      Site Name
+    </h1>
+    <p class="text-lg max-w-lg">
+      Replace this page with your site content. Connect to Sanity via
+      <code>src/lib/sanity.ts</code> and update the project ID.
+    </p>
+  </main>
+</Layout>

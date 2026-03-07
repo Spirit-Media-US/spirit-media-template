@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ───────────────────────────────────────────
+   Replace these with site-specific values.
+   See existing sites for examples:
+   - artsbyjustin: warm/gallery palette
+   - spirit-media-publishing: brand blues
+   - FHB: parchment/ink palette
+──────────────────────────────────────────────────────────────── */
+:root {
+  --font-sans: system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-accent: #2563eb;
+}
