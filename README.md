@@ -1,5 +1,7 @@
 # Spirit Media Site Template
 
+> **Claude:** Always read `PROJECT-STATUS.md` at the start of every session before touching any code or making any claims about project state.
+
 Astro + Tailwind + Sanity CMS starter for all Spirit Media Network sites.
 
 ## New Site Checklist
