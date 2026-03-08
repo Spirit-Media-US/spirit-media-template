@@ -1,8 +1,9 @@
 name: Deploy to Netlify
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: # Manual trigger only — template repo has no Netlify site
+  # push:           # Uncomment for real sites once NETLIFY_HOOK_URL secret is set
+  #   branches: [main]
 
 jobs:
   deploy:
