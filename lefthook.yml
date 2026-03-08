@@ -1,0 +1,14 @@
+pre-push:
+  commands:
+    update-status:
+      run: node scripts/update-status.mjs && git add PROJECT-STATUS.md
+      skip:
+        - merge
+        - rebase
+
+pre-commit:
+  commands:
+    biome:
+      glob: "*.{js,ts,jsx,tsx,json,css,astro}"
+      run: bunx biome check --write --no-errors-on-unmatched {staged_files}
+      stage_fixed: true
