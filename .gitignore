@@ -1,15 +1,26 @@
-# Dependencies
-node_modules/
 dist/
 .astro/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
 
 # Sanity studio build artifacts
 .sanity/runtime/
 
-# Environment
-.env
-.env.local
-.env.production
+# Media files — never commit to git
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.mp4
+*.mp3
+*.mov
+*.pdf
+*.bak
 
 # OS
 .DS_Store
@@ -18,3 +29,5 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+.mcp.json
