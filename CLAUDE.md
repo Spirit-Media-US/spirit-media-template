@@ -48,5 +48,5 @@ When creating a new site, clone this template and customize the CLAUDE.md with t
 - All work goes to the **dev** branch -- never push directly to main
 - Only merge dev to main when Kevin says "push to main"
 - Every site cloned from this template must have a customized CLAUDE.md
-- netlify.toml must include [[headers]] with CSP and security headers
+- public/_headers must include CSP and security headers
 - 404 page should have noindex meta tag
