@@ -13,6 +13,12 @@ pre-push:
 
 pre-commit:
   commands:
+    perf-traits-doc:
+      run: /home/deploy/bin/perf-traits-audit.sh --commit-hook
+      stage_fixed: true
+      skip:
+        - merge
+        - rebase
     biome:
       glob: "*.{js,ts,jsx,tsx,json,css,astro}"
       run: bunx biome check --write --no-errors-on-unmatched {staged_files}
