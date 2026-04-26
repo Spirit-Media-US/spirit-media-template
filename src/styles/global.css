@@ -23,11 +23,11 @@
    components/utilities), which silently strips responsive utilities
    like lg:grid-cols-N below the fold.
 
-   Two exceptions stay at the top level (CSS spec forbids them inside
-   @layer): @font-face and @keyframes.
+   Two at-rules stay at the top level (CSS spec forbids them inside
+   @layer): font-face declarations and keyframes.
 
-   Diagnostic: see /home/deploy/.claude/projects/-home-deploy/memory/
-   reference_100club_cascade_rules.md
+   Diagnostic notes:
+   /home/deploy/.claude/projects/-home-deploy/memory/reference_100club_cascade_rules.md
 ──────────────────────────────────────────────────────────────── */
 
 .container-site {

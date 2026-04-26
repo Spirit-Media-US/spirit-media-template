@@ -1,14 +1,11 @@
 ---
 // SMP Site Index — 100 Club hero scaffold.
-//
-// Replace the placeholder hero image with a real Sanity asset before launch.
-// Pattern below shows every trait the perf gate checks for:
-//   T1 — srcset with mobile (<=800w) + desktop entries, fm=webp & q=80
-//   T2 — preload + fetchpriority="high" in <Fragment slot="head">
-//   T7 — first <section> has zero data-aos / animation hooks
-//   T8 — <img> carries explicit width= / height= attributes
-//
-// Build images as `urlFor(heroImg).width(W).format('webp').quality(80).url()`.
+// See /home/deploy/claude-config/rules/performance-gate.md for the trait list.
+// Keep this hero pattern intact when wiring real Sanity content:
+//   * srcset (mobile <=800w + desktop), fm=webp&q=80
+//   * Fragment slot=head preload with fetchpriority high
+//   * explicit width / height on the img tag
+//   * no animation hooks on the first hero region
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 // import { sanityClient, urlFor } from '../lib/sanity.ts';
@@ -59,6 +56,6 @@ const heroDesktop = '/hero-placeholder-1200.webp';
       </div>
     </section>
 
-    <!-- Below-fold sections may use data-animate / reveal wrappers. Keep them OFF the hero. -->
+    <!-- Below-fold regions may use reveal-on-scroll wrappers. Keep animation hooks OFF the hero. -->
   </main>
 </Layout>
