@@ -6,7 +6,6 @@
  * To run manually: node scripts/update-status.mjs
  */
 
-import { createClient } from '@sanity/client';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -14,8 +13,16 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const STATUS_FILE = join(__dirname, '..', 'PROJECT-STATUS.md');
 
+const PROJECT_ID = 'REPLACE_PROJECT_ID';
+
+if (PROJECT_ID === 'REPLACE_PROJECT_ID') {
+  console.log('⏭️  update-status: projectId placeholder not set — skipping (template repo).');
+  process.exit(0);
+}
+
+const { createClient } = await import('@sanity/client');
 const client = createClient({
-  projectId: 'REPLACE_PROJECT_ID',
+  projectId: PROJECT_ID,
   dataset: 'production',
   useCdn: false,
   apiVersion: '2024-01-01',
