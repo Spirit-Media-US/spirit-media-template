@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/sync-100club-registry.mjs && rm -rf public/studio && sanity build public/studio --yes && astro build && node scripts/async-css.mjs",
+    "verify": "node scripts/100club-verify.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
@@ -18,5 +19,8 @@
     "sanity-plugin-media": "^4.1.1",
     "styled-components": "^6.0.0",
     "tailwindcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.59.1"
   }
 }
