@@ -2,9 +2,12 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
-// TODO: Replace site URL once the live domain is known.
+// Each cloned site MUST set PUBLIC_SITE_URL (in .env locally and in the
+// CF Pages production env). The fallback is intentionally a fake string so a
+// missed configuration is caught in QA (canonical/og:url will render with
+// example.com and grep visibly) instead of shipping silently.
 export default defineConfig({
-  site: 'https://REPLACE_WITH_DOMAIN.com',
+  site: process.env.PUBLIC_SITE_URL || 'https://example.com',
   integrations: [sitemap()],
   build: {
     // Trait 6: Astro inlines small stylesheets, externalizes larger ones.
