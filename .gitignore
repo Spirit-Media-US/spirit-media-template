@@ -38,3 +38,6 @@ Thumbs.db
 # Per-machine Claude Code settings
 .claude/settings.local.json
 public/studio/
+
+# 100 Club registry — generated at build time by scripts/sync-100club-registry.mjs (from R2); not source
+src/data/100club-sites.json
